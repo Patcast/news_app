@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1079256979380",
+    "project_id": "explosivepopcorn-2428d",
+    "storage_bucket": "explosivepopcorn-2428d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1079256979380:android:2d1dbea1ed91707177c4e1",
+        "android_client_info": {
+          "package_name": "pat.international.explosivepopcorn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1079256979380-bpdjuut1m502k2gfrges0mq8u4t1tsk2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRW9sGaz9FAIBY4Ke98ciT0ivfheymKEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1079256979380-bpdjuut1m502k2gfrges0mq8u4t1tsk2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
