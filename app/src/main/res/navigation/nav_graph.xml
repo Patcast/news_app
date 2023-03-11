@@ -13,10 +13,22 @@
         <action
             android:id="@+id/action_FirstFragment_to_categoriesList"
             app:destination="@id/categoriesList" />
+        <action
+            android:id="@+id/action_FirstFragment_to_articleView"
+            app:destination="@id/articleView" />
     </fragment>
     <fragment
         android:id="@+id/categoriesList"
         android:name="pat.international.explosivepopcorn.CategoriesList"
         android:label="fragment_categories"
         tools:layout="@layout/fragment_categories" />
+    <fragment
+        android:id="@+id/articleView"
+        android:name="pat.international.explosivepopcorn.ArticleView"
+        android:label="fragment_article_view"
+        tools:layout="@layout/fragment_article_view" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
 </navigation>

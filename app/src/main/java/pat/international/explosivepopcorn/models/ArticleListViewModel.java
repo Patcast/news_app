@@ -1,7 +1,9 @@
 package pat.international.explosivepopcorn.models;
 
+import android.os.Build;
 import android.util.Log;
 
+import androidx.annotation.RequiresApi;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -12,6 +14,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class ArticleListViewModel extends ViewModel {
     private static final String TAG = "Article List";
@@ -48,5 +51,12 @@ public class ArticleListViewModel extends ViewModel {
                 selectListOfArticles(newListOfArticles);
             }
         });
+    }
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public Article getSelectedArticle(String idOfArticle){
+        Optional<Article> possibleTransaction = getListOfArticles().getValue().stream()
+                .filter(t->t.getId().equals(idOfArticle))
+                .findFirst();
+        return possibleTransaction.orElse(null);
     }
 }

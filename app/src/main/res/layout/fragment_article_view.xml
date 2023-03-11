@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+<LinearLayout
+
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ArticleView"
+    android:orientation="vertical"
+    >
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:src="@tools:sample/avatars" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/textTopic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AI and Machine Learning"
+            android:gravity="start"
+            android:layout_marginBottom="12dp"
+            />
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Protocols in actinobacterial research"
+            android:gravity="left"
+            android:layout_marginBottom="12dp"
+            />
+        <TextView
+            android:id="@+id/textAuthor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Subhashish Das"
+            android:gravity="start"
+            android:layout_marginBottom="12dp"
+            />
+        <TextView
+            android:id="@+id/textData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2022"
+            android:gravity="start"
+            android:layout_marginBottom="12dp"
+            />
+        <TextView
+            android:id="@+id/textSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The article titled Design Thinking for Education by Subhashish Das and Pratiksha Sharma explores the use of design thinking in the field of education. The authors emphasize the importance of incorporating empathy, experimentation, and iteration into the design of educational programs and materials.The article begins by highlighting the challenges faced by educators in designing effective and engaging learning experiences for students. Traditional approaches to curriculum design often prioritize content over student needs and interests, resulting in disengaged learners and lower academic performance.Design thinking offers an alternative approach to curriculum design, focusing on the needs of the learners themselves. This process involves empathy for the student, experimentation with different teaching methods, and iteration based on feedback from both students and instructors.The authors provide several examples of how design thinking can be applied in educational settings, including the use of prototyping to test out new teaching strategies, and the co-creation of curriculum with students to better align it with their interests and needs.The article also emphasizes the importance of interdisciplinary collaboration in design thinking for education, encouraging educators to work with professionals from fields such as psychology, engineering, and technology to develop innovative learning experiences.Overall, Design Thinking for Education presents a compelling argument for the use of design thinking in curriculum design. By prioritizing empathy, experimentation, and iteration, educators can create learning experiences that are engaging, effective, and tailored to the needs of their students."
+            android:gravity="start"
+            android:layout_marginBottom="12dp"
+        />
+
+        <TextView
+            android:id="@+id/textSource"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="https://link.springer.com/content/pdf/10.1007/978-1-0716-0728-2.pdf"
+            android:gravity="start"
+            android:layout_marginBottom="12dp"
+            />
+
+
+
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>
