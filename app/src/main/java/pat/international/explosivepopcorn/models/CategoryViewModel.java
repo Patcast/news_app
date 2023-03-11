@@ -31,7 +31,7 @@ public class CategoryViewModel extends ViewModel {
     }
 
     public void requestListOfCategories() {
-        String urlGetAccountTransactions = "articles";
+        String urlGetAccountTransactions = "categories";
         Query articleTransQuery = db.collection(urlGetAccountTransactions);
         articleTransQuery.addSnapshotListener((value, e) -> {
             if (e != null) {

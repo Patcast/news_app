@@ -19,32 +19,31 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-import pat.international.explosivepopcorn.adapters.ArticlesRecViewAdapter;
-import pat.international.explosivepopcorn.models.Article;
-import pat.international.explosivepopcorn.models.ArticleListViewModel;
+import pat.international.explosivepopcorn.adapters.CategoriesRecViewAdapter;
+import pat.international.explosivepopcorn.models.Category;
+import pat.international.explosivepopcorn.models.CategoryViewModel;
 
 
 public class CategoriesList extends Fragment {
 
     private static final String TAG = "CategoriesList";
     RecyclerView recyclerArticles;
-    ArticlesRecViewAdapter adapter;
-    ArrayList<Article> articlesList = new ArrayList<>();
+    CategoriesRecViewAdapter adapter;
     View view;
     NavController navController;
-    ArticleListViewModel viewModel;
+    CategoryViewModel viewModel;
 
     @Override
     public void onCreate(@Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        viewModel = new ViewModelProvider(requireActivity()).get(ArticleListViewModel.class);
+        viewModel = new ViewModelProvider(requireActivity()).get(CategoryViewModel.class);
 
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.articles_list, container, false);
+        view = inflater.inflate(R.layout.fragment_categories, container, false);
         startRecyclerView(view);
         return view;
     }
@@ -53,17 +52,17 @@ public class CategoriesList extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         navController = Navigation.findNavController(view);
-        viewModel.requestListOfArticles();
-        viewModel.getListOfArticles().observe(getViewLifecycleOwner(), i->adapter.setArticles(i));
+        viewModel.requestListOfCategories();
+        viewModel.getListOfCategories().observe(getViewLifecycleOwner(), i->adapter.setCategories(i));
 
     }
 
 
 
     private void startRecyclerView(View view){
-        recyclerArticles = view.findViewById(R.id.rec_view_article);
+        recyclerArticles = view.findViewById(R.id.rec_categories);
         recyclerArticles.setLayoutManager(new LinearLayoutManager(this.getContext()));
-        adapter = new ArticlesRecViewAdapter(viewModel,view);
+        adapter = new CategoriesRecViewAdapter(viewModel);
         recyclerArticles.setAdapter(adapter);
     }
 
