@@ -43,10 +43,11 @@ public class CategoriesRecViewAdapter extends RecyclerView.Adapter<CategoriesRec
         Category cat = categories.get(position);
         holder.textHeader.setText(cat.getTitle());
         if(!cat.isSelected())holder.textHeader.setTextColor(ContextCompat.getColor(context, R.color.white));
+        else holder.textHeader.setTextColor(ContextCompat.getColor(context, R.color.black));
 
         holder.parent.setEnabled(cat.isSelected());
-        holder.parent.setOnClickListener(v -> {
-
+        holder.superParent.setOnClickListener(v -> {
+            cat.updateCategory();
         }
         );
     }
@@ -62,11 +63,14 @@ public class CategoriesRecViewAdapter extends RecyclerView.Adapter<CategoriesRec
     public class ViewHolder extends RecyclerView.ViewHolder{
         private TextView textHeader;
         private ConstraintLayout parent;
+        private ConstraintLayout superParent;
 
 
         public ViewHolder(@NonNull  View itemView) {
             super(itemView);
             textHeader = itemView.findViewById(R.id.text_tile);
+            superParent = itemView.findViewById(R.id.category_layout);
+
             parent=itemView.findViewById(R.id.rec_chosen);
         }
     }

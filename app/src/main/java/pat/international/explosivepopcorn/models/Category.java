@@ -23,7 +23,7 @@ public class Category {
     public  void updateCategory(){
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         setSelected();
-        String urlNewTransactions = "/accounts/";
+        String urlNewTransactions = "categories";
         db.collection(urlNewTransactions).document(id)
                 .set(this)
                 .addOnSuccessListener(aVoid -> Log.d(TAG, "DocumentSnapshot successfully written!"))

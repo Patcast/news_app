@@ -43,6 +43,7 @@ public class CategoryViewModel extends ViewModel {
             if (value != null) {
                 for (QueryDocumentSnapshot doc : value) {
                     Category category = doc.toObject(Category.class);
+                    category.setId(doc.getId());
                     newListOfCategories.add(category);
                 }
                 selectListOfCategories(newListOfCategories);

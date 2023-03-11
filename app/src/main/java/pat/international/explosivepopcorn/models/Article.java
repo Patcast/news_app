@@ -39,15 +39,15 @@ public class Article {
         return date;
     }
 
+    public String getId() {
+        return id;
+    }
+
     public String getDateArticle() {
         return dateArticle;
     }
 
     public String getTopic() {
         return topic;
-    }
-
-    public String getId() {
-        return id;
     }
 }
