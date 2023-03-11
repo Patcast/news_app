@@ -18,13 +18,13 @@
         android:translationZ="12dp"
         app:cardBackgroundColor="@color/black"
         app:cardCornerRadius="15dp"
-        app:cardElevation="10dp"
+        app:cardElevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:strokeColor="@color/gray_lightest"
-        app:strokeWidth="0.7dp">
+        app:strokeWidth="0.6dp">
 
         <LinearLayout
             android:layout_width="match_parent"
