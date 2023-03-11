@@ -14,10 +14,16 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:context=".ArticleView">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <ImageView
+            android:id="@+id/image_card"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="140dp"
+            android:contentDescription="@string/picture"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/placeholder" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -59,7 +65,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
                     android:fontFamily="@font/lato"
-                    android:text="@string/date"
+                    android:text="11 March 2023"
                     android:textAllCaps="true"
                     android:textColor="@color/gray_dark"
                     android:textSize="11sp" />
@@ -97,19 +103,7 @@
 
             </LinearLayout>
 
-            <ImageView
-                android:id="@+id/image_card_summary"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:contentDescription="@string/picture"
-                android:scaleType="centerCrop"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="SpeakableTextPresentCheck"
-                tools:src="@drawable/placeholder" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 </ScrollView>
