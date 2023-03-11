@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageButton;
 
 
 import androidx.annotation.NonNull;
@@ -32,7 +32,7 @@ public class ArticlesList extends Fragment {
     View view;
     NavController navController;
     ArticleListViewModel viewModel;
-    Button categoriesMenuButton;
+    ImageButton categoriesMenuButton;
 
     @Override
     public void onCreate(@Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {

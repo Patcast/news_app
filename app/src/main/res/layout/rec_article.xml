@@ -58,7 +58,7 @@
                     android:scaleType="fitCenter"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/image_card"
-                    app:srcCompat="@drawable/bookmark_empty" />
+                    app:srcCompat="@drawable/icon_bookmark_empty" />
 
                 <ImageButton
                     android:id="@+id/heart_btn"
@@ -72,7 +72,7 @@
                     android:scaleType="fitCenter"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/bookmark_btn"
-                    app:srcCompat="@drawable/heart_empty" />
+                    app:srcCompat="@drawable/icon_heart_empty" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
