@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
    android:paddingVertical="20dp"
+    android:id="@+id/category_layout"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -21,7 +22,7 @@
 
 
         <TextView
-            android:id="@+id/text_Account_balance"
+            android:id="@+id/text_tile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
