@@ -23,8 +23,7 @@ public class CategoriesRecViewAdapter extends RecyclerView.Adapter<CategoriesRec
 
     private final List<Category> categories = new ArrayList<>();
     CategoryViewModel viewModel;
-    View view;
-    Context context;
+
     public CategoriesRecViewAdapter(CategoryViewModel viewModel) {
         this.viewModel= viewModel;
     }
@@ -41,7 +40,7 @@ public class CategoriesRecViewAdapter extends RecyclerView.Adapter<CategoriesRec
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Category cat = categories.get(position);
         holder.textHeader.setText(cat.getTitle());
-        Resources res = view.getResources();
+
         holder.parent.setEnabled(cat.isSelected());
         holder.parent.setOnClickListener(v -> {
                 }
@@ -64,7 +63,7 @@ public class CategoriesRecViewAdapter extends RecyclerView.Adapter<CategoriesRec
         public ViewHolder(@NonNull  View itemView) {
             super(itemView);
             textHeader = itemView.findViewById(R.id.text_tile);
-            parent=itemView.findViewById(R.id.category_layout);
+            parent=itemView.findViewById(R.id.rec_chosen);
         }
     }
 
