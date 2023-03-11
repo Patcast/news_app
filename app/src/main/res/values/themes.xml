@@ -14,8 +14,8 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-        <item name="android:ambientShadowAlpha">0.3</item>
-        <item name="android:spotShadowAlpha">0.3</item>
+<!--        <item name="android:ambientShadowAlpha">0.15</item>-->
+<!--        <item name="android:spotShadowAlpha">0.15</item>-->
     </style>
 
     <style name="Theme.ExplosivePopcorn.NoActionBar">
