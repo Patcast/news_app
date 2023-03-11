@@ -11,4 +11,6 @@
     <string name="ai_ml">AI and Machine Learning</string>
     <string name="picture">picture</string>
     <string name="icon">icon</string>
+    <string name="topics">Topics</string>
+
 </resources>
