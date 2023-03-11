@@ -18,6 +18,7 @@ import android.view.LayoutInflater;
 
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import pat.international.explosivepopcorn.models.Article;
@@ -34,6 +35,8 @@ public class ArticleView extends Fragment  {
     TextView SummaryTxt;
     TextView AuthorTxt;
     TextView SourceTxt;
+    ImageView image;
+    private final int[] primes = {R.drawable.a1, R.drawable.a2, R.drawable.a3, R.drawable.a4, R.drawable.a5, R.drawable.a6, R.drawable.a7};
 
     @Override
     public void onCreate(@Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
@@ -60,6 +63,7 @@ public class ArticleView extends Fragment  {
         SummaryTxt = view.findViewById(R.id.textSummary);
         AuthorTxt = view.findViewById(R.id.textAuthor);
         SourceTxt = view.findViewById(R.id.textSource);
+        image = view.findViewById(R.id.image_card);
 
 
         fillData();
@@ -72,6 +76,8 @@ public class ArticleView extends Fragment  {
         SummaryTxt.setText(article.getSummary());
         AuthorTxt.setText(article.getAuthor());
         SourceTxt.setText(article.getSource());
+        image.setImageResource(primes[article.retrieveIdImage()]);
+
     }
 
 

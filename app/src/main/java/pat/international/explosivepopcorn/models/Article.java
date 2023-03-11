@@ -22,11 +22,10 @@ public class Article {
     }
 
     private void generateImageId() {
-        int min = 1; // Minimum value of range
-        int max = 7; // Maximum value of range
-        // Print the min and max
-        // Generate random int value from min to max
+        int min = 0; // Minimum value of range
+        int max = 6; // Maximum value of range
         idImage = (int)Math.floor(Math.random() * (max - min + 1) + min);
+
     }
 
     public String getTitle() {

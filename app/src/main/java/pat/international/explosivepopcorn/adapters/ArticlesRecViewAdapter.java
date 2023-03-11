@@ -29,7 +29,7 @@ public class ArticlesRecViewAdapter extends RecyclerView.Adapter<ArticlesRecView
     NavController navController;
     ArticleListViewModel viewModel;
     private Context context;
-    private int[] primes = {R.drawable.a1, R.drawable.a2, R.drawable.a3, R.drawable.a4, R.drawable.a5, R.drawable.a6, R.drawable.a7};
+    private final int[] primes = {R.drawable.a1, R.drawable.a2, R.drawable.a3, R.drawable.a4, R.drawable.a5, R.drawable.a6, R.drawable.a7};
 
 
     public ArticlesRecViewAdapter(ArticleListViewModel viewModel, View viewFromHostingClass, Context context) {
