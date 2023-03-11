@@ -65,7 +65,7 @@ public class ArticlesRecViewAdapter extends RecyclerView.Adapter<ArticlesRecView
 
         public ViewHolder(@NonNull  View itemView) {
             super(itemView);
-            textHeader = itemView.findViewById(R.id.header_textView);
+            textHeader = itemView.findViewById(R.id.title_card);
             parent=itemView.findViewById(R.id.recView_item_articles);
         }
     }
