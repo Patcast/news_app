@@ -1,8 +1,10 @@
 package pat.international.explosivepopcorn.adapters;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,6 +14,7 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import pat.international.explosivepopcorn.ArticlesListDirections;
@@ -25,10 +28,14 @@ public class ArticlesRecViewAdapter extends RecyclerView.Adapter<ArticlesRecView
     private final View viewFromHostingClass;
     NavController navController;
     ArticleListViewModel viewModel;
+    private Context context;
+    private int[] primes = {R.drawable.a1, R.drawable.a2, R.drawable.a3, R.drawable.a4, R.drawable.a5, R.drawable.a6, R.drawable.a7};
 
-    public ArticlesRecViewAdapter(ArticleListViewModel viewModel,View viewFromHostingClass) {
+
+    public ArticlesRecViewAdapter(ArticleListViewModel viewModel, View viewFromHostingClass, Context context) {
         this.viewFromHostingClass = viewFromHostingClass;
         this.viewModel= viewModel;
+        this.context = context;
     }
 
 
@@ -45,7 +52,7 @@ public class ArticlesRecViewAdapter extends RecyclerView.Adapter<ArticlesRecView
         Article article = articles.get(position);
         holder.textHeader.setText(article.getTitle());
         holder.topic.setText(article.getTopic());
-
+        holder.image.setImageResource(primes[article.retrieveIdImage()]);
         holder.parent.setOnClickListener(v -> {
             ArticlesListDirections.ActionFirstFragmentToArticleView action = ArticlesListDirections.actionFirstFragmentToArticleView(article.getId());
             navController.navigate(action);
@@ -64,13 +71,14 @@ public class ArticlesRecViewAdapter extends RecyclerView.Adapter<ArticlesRecView
         private TextView textHeader;
         private ConstraintLayout parent;
         private TextView topic;
-
+        private ImageView image;
 
         public ViewHolder(@NonNull  View itemView) {
             super(itemView);
             textHeader = itemView.findViewById(R.id.title_card);
             parent=itemView.findViewById(R.id.recView_item_articles);
             topic = itemView.findViewById(R.id.topic_card);
+            image = itemView.findViewById(R.id.image_card);
         }
     }
 

@@ -11,16 +11,30 @@ public class Article {
     private String id;
     private String dateArticle;
     private String topic;
+    private int idImage;
 
     public void setId(String id) {
         this.id = id;
     }
 
     public Article() {
+        generateImageId();
+    }
+
+    private void generateImageId() {
+        int min = 1; // Minimum value of range
+        int max = 7; // Maximum value of range
+        // Print the min and max
+        // Generate random int value from min to max
+        idImage = (int)Math.floor(Math.random() * (max - min + 1) + min);
     }
 
     public String getTitle() {
         return title;
+    }
+
+    public int retrieveIdImage() {
+        return idImage;
     }
 
     public String getSource() {

@@ -58,13 +58,13 @@ public class CategoriesList extends Fragment {
     }
 
 
-
     private void startRecyclerView(View view){
         recyclerArticles = view.findViewById(R.id.rec_categories);
         recyclerArticles.setLayoutManager(new LinearLayoutManager(this.getContext()));
         adapter = new CategoriesRecViewAdapter(viewModel,getContext());
         recyclerArticles.setAdapter(adapter);
     }
+
 
 
 

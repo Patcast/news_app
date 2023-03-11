@@ -68,7 +68,7 @@ public class ArticlesList extends Fragment {
     private void startRecyclerView(View view){
         recyclerArticles = view.findViewById(R.id.rec_view_article);
         recyclerArticles.setLayoutManager(new LinearLayoutManager(this.getContext()));
-        adapter = new ArticlesRecViewAdapter(viewModel,view);
+        adapter = new ArticlesRecViewAdapter(viewModel,view,getContext());
         recyclerArticles.setAdapter(adapter);
     }
 
