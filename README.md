@@ -1,6 +1,7 @@
 # Insight App
 
 Insight is an Android native app that allows users to stay up-to-date with the latest news and articles in various categories. The app uses Firebase Firestore as a database and implements the Model-View-Controller (MVC) architecture. The articles are retrieved from the internet using Google's APIs, and a Chat GPT API is used to generate summaries for the articles.
+** To find the source code that handles the back end. Review the other respository that wwas submitted please.
 
 ## Features
 
