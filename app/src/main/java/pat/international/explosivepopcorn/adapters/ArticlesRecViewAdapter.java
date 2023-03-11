@@ -43,7 +43,6 @@ public class ArticlesRecViewAdapter extends RecyclerView.Adapter<ArticlesRecView
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Article article = articles.get(position);
         holder.textHeader.setText(article.getTitle());
-        holder.textSummary.setText(article.getSummary());
 
         holder.parent.setOnClickListener(v -> {
                     //navController.navigate(R.id.action_accounts_to_allTransactions2);
@@ -67,7 +66,6 @@ public class ArticlesRecViewAdapter extends RecyclerView.Adapter<ArticlesRecView
         public ViewHolder(@NonNull  View itemView) {
             super(itemView);
             textHeader = itemView.findViewById(R.id.header_textView);
-            textSummary = itemView.findViewById(R.id.summary_textView);
             parent=itemView.findViewById(R.id.recView_item_articles);
         }
     }
