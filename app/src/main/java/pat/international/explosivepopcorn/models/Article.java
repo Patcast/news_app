@@ -6,10 +6,15 @@ public class Article {
     private String title;
     private String source;
     private String summary;
-    private String text;
+    private String author;
+    private int date;
     private String id;
+    private String dateArticle;
+    private String topic;
 
-
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public Article() {
     }
@@ -26,8 +31,20 @@ public class Article {
         return summary;
     }
 
-    public String getText() {
-        return text;
+    public String getAuthor() {
+        return author;
+    }
+
+    public int getDate() {
+        return date;
+    }
+
+    public String getDateArticle() {
+        return dateArticle;
+    }
+
+    public String getTopic() {
+        return topic;
     }
 
     public String getId() {

@@ -46,7 +46,8 @@ public class CategoriesRecViewAdapter extends RecyclerView.Adapter<CategoriesRec
 
         holder.parent.setEnabled(cat.isSelected());
         holder.parent.setOnClickListener(v -> {
-                }
+
+        }
         );
     }
 

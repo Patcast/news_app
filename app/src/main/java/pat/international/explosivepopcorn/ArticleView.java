@@ -18,6 +18,8 @@ import android.view.LayoutInflater;
 
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
 import pat.international.explosivepopcorn.models.Article;
 import pat.international.explosivepopcorn.models.ArticleListViewModel;
 
@@ -27,6 +29,7 @@ public class ArticleView extends Fragment  {
     ArticleListViewModel viewModel;
     View view;
     Article article;
+    TextView titleTxt;
 
     @Override
     public void onCreate(@Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
@@ -38,7 +41,7 @@ public class ArticleView extends Fragment  {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.articles_list, container, false);
+        view = inflater.inflate(R.layout.fragment_article_view, container, false);
 
         return view;
     }
@@ -46,12 +49,15 @@ public class ArticleView extends Fragment  {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        article= viewModel.getSelectedArticle(null);
-
+        ArticleViewArgs args = ArticleViewArgs.fromBundle(getArguments());
+        article= viewModel.getSelectedArticle(args.getId());
+        titleTxt = view.findViewById(R.id.textTitle);
+        fillData();
     }
 
-
-
+    private void fillData() {
+        titleTxt.setText(article.getTitle());
+    }
 
 
 }

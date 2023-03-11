@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import pat.international.explosivepopcorn.ArticlesListDirections;
 import pat.international.explosivepopcorn.R;
 import pat.international.explosivepopcorn.models.Article;
 import pat.international.explosivepopcorn.models.ArticleListViewModel;
@@ -45,8 +46,9 @@ public class ArticlesRecViewAdapter extends RecyclerView.Adapter<ArticlesRecView
         holder.textHeader.setText(article.getTitle());
 
         holder.parent.setOnClickListener(v -> {
-                    //navController.navigate(R.id.action_accounts_to_allTransactions2);
-                }
+            ArticlesListDirections.ActionFirstFragmentToArticleView action = ArticlesListDirections.actionFirstFragmentToArticleView(article.getId());
+            navController.navigate(action);
+        }
         );
 
     }
@@ -59,7 +61,6 @@ public class ArticlesRecViewAdapter extends RecyclerView.Adapter<ArticlesRecView
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         private TextView textHeader;
-        private TextView textSummary;
         private ConstraintLayout parent;
 
 

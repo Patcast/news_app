@@ -46,6 +46,7 @@ public class ArticleListViewModel extends ViewModel {
             if (value != null) {
                 for (QueryDocumentSnapshot doc : value) {
                     Article article = doc.toObject(Article.class);
+                    article.setId(doc.getId());
                     newListOfArticles.add(article);
                 }
                 selectListOfArticles(newListOfArticles);
