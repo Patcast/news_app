@@ -30,6 +30,10 @@ public class ArticleView extends Fragment  {
     View view;
     Article article;
     TextView titleTxt;
+    TextView topicTxt;
+    TextView SummaryTxt;
+    TextView AuthorTxt;
+    TextView SourceTxt;
 
     @Override
     public void onCreate(@Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
@@ -52,11 +56,22 @@ public class ArticleView extends Fragment  {
         ArticleViewArgs args = ArticleViewArgs.fromBundle(getArguments());
         article= viewModel.getSelectedArticle(args.getId());
         titleTxt = view.findViewById(R.id.textTitle);
+        topicTxt = view.findViewById(R.id.textTopic);
+        SummaryTxt = view.findViewById(R.id.textSummary);
+        AuthorTxt = view.findViewById(R.id.textAuthor);
+        SourceTxt = view.findViewById(R.id.textSource);
+
+
         fillData();
     }
 
     private void fillData() {
+
         titleTxt.setText(article.getTitle());
+        topicTxt.setText(article.getTopic());
+        SummaryTxt.setText(article.getSummary());
+        AuthorTxt.setText(article.getAuthor());
+        SourceTxt.setText(article.getSource());
     }
 
 

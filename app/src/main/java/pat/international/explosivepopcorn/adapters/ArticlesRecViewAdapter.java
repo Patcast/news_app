@@ -44,6 +44,7 @@ public class ArticlesRecViewAdapter extends RecyclerView.Adapter<ArticlesRecView
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Article article = articles.get(position);
         holder.textHeader.setText(article.getTitle());
+        holder.topic.setText(article.getTopic());
 
         holder.parent.setOnClickListener(v -> {
             ArticlesListDirections.ActionFirstFragmentToArticleView action = ArticlesListDirections.actionFirstFragmentToArticleView(article.getId());
@@ -62,12 +63,14 @@ public class ArticlesRecViewAdapter extends RecyclerView.Adapter<ArticlesRecView
     public class ViewHolder extends RecyclerView.ViewHolder{
         private TextView textHeader;
         private ConstraintLayout parent;
+        private TextView topic;
 
 
         public ViewHolder(@NonNull  View itemView) {
             super(itemView);
             textHeader = itemView.findViewById(R.id.title_card);
             parent=itemView.findViewById(R.id.recView_item_articles);
+            topic = itemView.findViewById(R.id.topic_card);
         }
     }
 
