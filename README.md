@@ -1,32 +1,37 @@
-# Insight App
-## Main fetures:
+#Insight App
 
-Our App is a fully functional android native App. All the information that is present is actual data that was retrive by our programs and API's usage. 
+Insight is an Android native app that allows users to stay up-to-date with the latest news and articles in various categories. The app uses Firebase Firestore as a database and implements the Model-View-Controller (MVC) architecture. The articles are retrieved from the internet using Google's APIs, and a Chat GPT API is used to generate summaries for the articles.
 
+##Features
 
-### General
-- Uses firebase firestore for it's db (non-sql)
-- Realtime updates on the app from remore changes on the server
-- The database is hosted on the cloud
-- All articles are retrive from the db and generated via our API
-- Use of MVC arquitecthure
+Insight offers the following features:
 
+- Realtime updates: The app retrieves information from the database hosted on the cloud and updates in real-time using Firebase SnapshotListeners.
+- Personalized categories: Users can customize the categories that the app uses to find articles.
+- Latest articles feed: The app presents a list of the latest articles in the selected category.
+- Chat GPT summary: The app generates a summary of the hottest article in the selected category using a Chat GPT API.
+- Intuitive UI: The app's user interface was designed and fully implemented by our team to provide a seamless and enjoyable experience.
 
-### List Of articles Fragment
-- Topic and Title are retive form the db and updated in realtime via firebase SnapshotListeners
-- Images hardcoded
-- The whole UI was designed and fully implemented by our team
+##How it works
 
-### Menu of Categories Fragment
-- Categories can be selectes or deselected and the changes are updated in the db
-- State of the categories are syncronize with our realtime db
-- Server generates articlesm that later uppdates to the db, based on the category selection of this section in realtime. 
-- The whole UI was designed and fully implemented by our team
-  
-### Article Fragment
-- All the infomation, besides the picture, belong to a real examples that were withdrawed by our API, that runs in our servers, from the internet. 
-- State of the categories are syncronize with our realtime db
-- The whole UI was designed and fully implemented by our team
+Insight has three main fragments:
+
+1. List of articles: This fragment displays a feed with the latest articles in the selected category. The app retrieves this information from the database and updates it in real-time using Firebase SnapshotListeners.
+2. Menu of categories: This fragment allows users to select or deselect categories. The app synchronizes these changes with the database, and the server generates articles based on the selected categories.
+3. Article fragment: This fragment presents a Chat GPT summary of the hottest article in the selected category. The app retrieves this information from the database and generates the summary using the Chat GPT API.
+
+##Technologies used
+
+Insight uses the following technologies:
+
+- Firebase Firestore: A NoSQL cloud-based database that enables real-time data synchronization.
+- Google APIs: The app uses Google's APIs to find the latest articles that match the selected categories.
+- Chat GPT API: The app generates summaries of articles using the Chat GPT API.
+- MVC architecture: The app follows the Model-View-Controller architecture to maintain a separation of concerns between the different components of the app.
+
+##Conclusion
+
+Insight is an Android native app that provides users with the latest news and articles in various categories. The app uses cutting-edge technologies like Firebase Firestore and Chat GPT to deliver personalized and real-time updates. Insight's intuitive UI makes it easy to use and provides a seamless experience for users.
 
 
 
