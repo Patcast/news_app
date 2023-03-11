@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/category_not_selected.xml" value="0.1715" />
         <entry key="app/src/main/res/drawable/category_selected.xml" value="0.1375" />
+        <entry key="app/src/main/res/drawable/category_selector.xml" value="0.1715" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/articles_list.xml" value="0.25384615384615383" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.25384615384615383" />
@@ -15,7 +17,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="jbr-11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

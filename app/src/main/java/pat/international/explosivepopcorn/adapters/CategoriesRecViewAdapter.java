@@ -1,5 +1,7 @@
 package pat.international.explosivepopcorn.adapters;
 
+import android.content.Context;
+import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -20,7 +23,8 @@ public class CategoriesRecViewAdapter extends RecyclerView.Adapter<CategoriesRec
 
     private final List<Category> categories = new ArrayList<>();
     CategoryViewModel viewModel;
-
+    View view;
+    Context context;
     public CategoriesRecViewAdapter(CategoryViewModel viewModel) {
         this.viewModel= viewModel;
     }
@@ -37,7 +41,8 @@ public class CategoriesRecViewAdapter extends RecyclerView.Adapter<CategoriesRec
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Category cat = categories.get(position);
         holder.textHeader.setText(cat.getTitle());
-
+        Resources res = view.getResources();
+        holder.parent.setEnabled(cat.isSelected());
         holder.parent.setOnClickListener(v -> {
                 }
         );
