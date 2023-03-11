@@ -13,24 +13,24 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArticleListViewModel extends ViewModel {
-    private static final String TAG = "Article List";
+public class CategoryViewModel extends ViewModel {
+    private static final String TAG = "CategoriesList";
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
 
 
-    private final MutableLiveData<List<Article>> listOfArticles = new MutableLiveData<>();
-    public LiveData<List<Article>> getListOfArticles () {
-        return listOfArticles ;
+    private final MutableLiveData<List<Category>> listOfCategories = new MutableLiveData<>();
+    public LiveData<List<Category>> getListOfCategories () {
+        return listOfCategories ;
     }
-    public void selectListOfArticles(List<Article> input){
-        listOfArticles.setValue(input);
+    public void selectListOfCategories(List<Category> input){
+        listOfCategories.setValue(input);
     }
     public void reset(){
-        listOfArticles .setValue(null);
+        listOfCategories .setValue(null);
     }
 
-    public void requestListOfArticles() {
+    public void requestListOfCategories() {
         String urlGetAccountTransactions = "articles";
         Query articleTransQuery = db.collection(urlGetAccountTransactions);
         articleTransQuery.addSnapshotListener((value, e) -> {
@@ -38,14 +38,14 @@ public class ArticleListViewModel extends ViewModel {
                 Log.w(TAG, "Listen failed.", e);
                 return;
             }
-            List<Article> newListOfArticles = new ArrayList<>();
+            List<Category> newListOfCategories = new ArrayList<>();
 
             if (value != null) {
                 for (QueryDocumentSnapshot doc : value) {
-                    Article article = doc.toObject(Article.class);
-                    newListOfArticles.add(article);
+                    Category category = doc.toObject(Category.class);
+                    newListOfCategories.add(category);
                 }
-                selectListOfArticles(newListOfArticles);
+                selectListOfCategories(newListOfCategories);
             }
         });
     }

@@ -1,6 +1,5 @@
 package pat.international.explosivepopcorn.models;
 
-import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Article {
     private static final String TAG = "Article";
@@ -10,7 +9,7 @@ public class Article {
     private String text;
     private String id;
 
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
+
 
     public Article() {
     }
