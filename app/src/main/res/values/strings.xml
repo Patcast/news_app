@@ -13,4 +13,7 @@
     <string name="icon">icon</string>
     <string name="topics">Topics</string>
     <string name="trends">Trends</string>
+    <string name="topic_explanation">Select your topics of interest</string>
+    <string name="account">Account</string>
+    <string name="bookmarks">Bookmarks</string>
 </resources>
