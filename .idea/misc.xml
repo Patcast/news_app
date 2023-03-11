@@ -7,6 +7,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/articles_list.xml" value="0.25384615384615383" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.25384615384615383" />
+        <entry key="app/src/main/res/layout/fragment_categories.xml" value="0.25384615384615383" />
         <entry key="app/src/main/res/layout/fragment_example.xml" value="0.25384615384615383" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.25384615384615383" />
         <entry key="app/src/main/res/layout/rec_article.xml" value="0.25384615384615383" />

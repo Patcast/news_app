@@ -9,5 +9,14 @@
         android:id="@+id/FirstFragment"
         android:name="pat.international.explosivepopcorn.ArticlesList"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/articles_list"/>
+        tools:layout="@layout/articles_list">
+        <action
+            android:id="@+id/action_FirstFragment_to_categoriesList"
+            app:destination="@id/categoriesList" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoriesList"
+        android:name="pat.international.explosivepopcorn.CategoriesList"
+        android:label="fragment_categories"
+        tools:layout="@layout/fragment_categories" />
 </navigation>

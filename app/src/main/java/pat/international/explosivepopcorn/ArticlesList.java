@@ -1,22 +1,16 @@
 package pat.international.explosivepopcorn;
 
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
+
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
+
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
-import androidx.core.view.MenuProvider;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -25,8 +19,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import androidx.annotation.Nullable;
+
 import pat.international.explosivepopcorn.adapters.ArticlesRecViewAdapter;
-import pat.international.explosivepopcorn.models.Article;
 import pat.international.explosivepopcorn.models.ArticleListViewModel;
 
 public class ArticlesList extends Fragment {
@@ -34,10 +29,10 @@ public class ArticlesList extends Fragment {
     private static final String TAG = "Articles";
     RecyclerView recyclerArticles;
     ArticlesRecViewAdapter adapter;
-    ArrayList<Article> articlesList = new ArrayList<>();
     View view;
     NavController navController;
     ArticleListViewModel viewModel;
+    Button categoriesMenuButton;
 
     @Override
     public void onCreate(@Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
@@ -50,16 +45,21 @@ public class ArticlesList extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.articles_list, container, false);
+        categoriesMenuButton = view.findViewById(R.id.button_categories);
         startRecyclerView(view);
+
         return view;
     }
-    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         navController = Navigation.findNavController(view);
         viewModel.requestListOfArticles();
         viewModel.getListOfArticles().observe(getViewLifecycleOwner(), i->adapter.setArticles(i));
+        categoriesMenuButton.setOnClickListener(v -> {
+            NavController navController = Navigation.findNavController(view);
+            navController.navigate(R.id.action_FirstFragment_to_categoriesList);
+        });
 
     }
 
