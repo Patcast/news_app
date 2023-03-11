@@ -17,7 +17,7 @@
         android:layout_marginTop="25dp"
         android:layout_marginBottom="25dp"
         android:paddingVertical="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintBottom_toTopOf="@+id/line_topics"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/explanation" />
@@ -39,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/lato"
         android:text="@string/topic_explanation"
         android:textColor="@color/white"
@@ -48,7 +48,7 @@
         app:layout_constraintTop_toBottomOf="@+id/topics" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/bookmarks_topics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -73,14 +73,29 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/line_topics"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="30dp"
         android:background="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintBottom_toTopOf="@+id/bookmarks_topics"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/back_btn_topics"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="10dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/icon"
+        android:padding="12dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_arrowback_white"
+        app:layout_constraintBottom_toBottomOf="@+id/topics"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topics" />
 </androidx.constraintlayout.widget.ConstraintLayout>

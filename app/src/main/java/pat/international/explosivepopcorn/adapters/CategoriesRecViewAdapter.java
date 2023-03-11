@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -23,9 +24,10 @@ public class CategoriesRecViewAdapter extends RecyclerView.Adapter<CategoriesRec
 
     private final List<Category> categories = new ArrayList<>();
     CategoryViewModel viewModel;
-
-    public CategoriesRecViewAdapter(CategoryViewModel viewModel) {
+    Context context;
+    public CategoriesRecViewAdapter(CategoryViewModel viewModel,Context context) {
         this.viewModel= viewModel;
+        this.context=context;
     }
 
 
@@ -40,6 +42,7 @@ public class CategoriesRecViewAdapter extends RecyclerView.Adapter<CategoriesRec
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Category cat = categories.get(position);
         holder.textHeader.setText(cat.getTitle());
+        if(!cat.isSelected())holder.textHeader.setTextColor(ContextCompat.getColor(context, R.color.white));
 
         holder.parent.setEnabled(cat.isSelected());
         holder.parent.setOnClickListener(v -> {
